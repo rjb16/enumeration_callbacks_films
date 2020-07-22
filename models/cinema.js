@@ -7,7 +7,11 @@ Cinema.prototype.filmTitles = function () {
 };
 
 Cinema.prototype.findByTitle = function (title) {
-  return this.films.find(film => film.title === title )
+  return this.films.find(film => film.title === title);
 };
+
+Cinema.prototype.filterByGenre = function (genre) {
+  return this.films.filter(film => film.genre === genre);
+}
 
 module.exports = Cinema;
