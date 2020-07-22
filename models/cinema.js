@@ -12,7 +12,7 @@ Cinema.prototype.findByTitle = function (title) {
 
 Cinema.prototype.filterByProperty = function (property, value) {
   return this.films.filter(film => film[property] === value);
-}
+};
 
 // Cinema.prototype.filterByYear = function (year) {
 //   return this.films.filter(film => film.year === year);
@@ -20,14 +20,14 @@ Cinema.prototype.filterByProperty = function (property, value) {
 
 Cinema.prototype.hasFilmsFrom = function (year) {
   return this.films.some(film => film.year === year);
-}
+};
 
 Cinema.prototype.allFilmsLongerThan = function (length) {
   return this.films.every(film => film.length > length);
-}
+};
 
 Cinema.prototype.totalFilmLength = function () {
   return this.films.reduce((acc, film) => acc + film.length, 0);
-}
+};
 
 module.exports = Cinema;
