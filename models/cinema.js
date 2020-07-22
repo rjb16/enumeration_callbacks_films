@@ -26,4 +26,8 @@ Cinema.prototype.allFilmsLongerThan = function (length) {
   return this.films.every(film => film.length > length);
 }
 
+Cinema.prototype.totalFilmLength = function () {
+  return this.films.reduce((acc, film) => acc + film.length, 0);
+}
+
 module.exports = Cinema;
