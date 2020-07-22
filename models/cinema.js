@@ -22,4 +22,8 @@ Cinema.prototype.hasFilmsFrom = function (year) {
   return this.films.some(film => film.year === year);
 }
 
+Cinema.prototype.allFilmsLongerThan = function (length) {
+  return this.films.every(film => film.length > length);
+}
+
 module.exports = Cinema;

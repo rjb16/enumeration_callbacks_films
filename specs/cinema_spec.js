@@ -57,7 +57,11 @@ describe('Cinema', function () {
     assert.strictEqual(cinema.hasFilmsFrom(1457), false);
   });
   
-  it('should be able to check whether all films are over a particular length');
+  it('should be able to check whether all films are over a particular length', function () {
+    assert.strictEqual(cinema.allFilmsLongerThan(5), true);
+    assert.strictEqual(cinema.allFilmsLongerThan(1000), false);
+  });
+  
   it('should be able to calculate total running time of all films');
 
 });
